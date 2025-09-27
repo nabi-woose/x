@@ -93,7 +93,7 @@ h2 {
 
 .profile-links {
   position: absolute;
-  top: 58%; 
+  top: 88%; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
