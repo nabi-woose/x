@@ -67,7 +67,7 @@ h2 {
 
 /* Sound toggle button */
 #soundToggle {
-  position: fixed;
+  position: absolute;
   top: 20px; 
   right: 20px;
   font-size: 24px;
