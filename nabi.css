@@ -344,3 +344,27 @@ position: relative;  /* fixed sa pwesto */
  max-width: 80vw;  /* para kahit mahaba, limitado lang sa screen */
 
 }
+@media screen and (max-width: 768px) {
+  .profile-box {
+    transform: scale(0.8);
+    margin-top: 20px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  /* kung may video background */
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+}
