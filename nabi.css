@@ -4,9 +4,12 @@ body {
   padding: 0;
   background: url() no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Orbitron', sans-serif; /* astig na font */
+  font-family: 'Orbitron', sans-serif;
   color: rgb(0, 0, 0);
   overflow: hidden;
+  /* FIXED LAYOUT: Gagawin ang content na 1200px width */
+  width: 1200px;
+  margin: 0 auto;
 }
 
 /* Profile box */
@@ -16,21 +19,19 @@ body {
   justify-content: flex-start;
   width: 400px;
   height: 100px;
-  border: 2px solid #f0f;  /* base neon pink border */
+  border: 2px solid #f0f;
   border-radius: 25px;
   padding: 10px;
   margin: 250px auto;
-  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
-  backdrop-filter: blur(10px); /* blur sa loob */
-  
-
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   /* ✨ Neon glow animation */
   animation: neonGlow 1.5s infinite alternate;
 }
 
 /* Lower part */
 .profile-lower {
-  height: 50%;
+  height: 250px; /* Fixed height */
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   text-align: center;
@@ -43,7 +44,6 @@ body {
   border-radius: 50%;
   margin-right: 15px;
   object-fit: cover;
-  
 }
 
 .profile-text {
@@ -63,23 +63,6 @@ h2 {
   font-size: 24px;
   font-family: Pacifico, cursive;
   color: #888687;
-}
-
-/* Music Control */
-.music-control {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
-#muteBtn {
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  color: rgb(223, 165, 165);
-  font-size: 18px;
-  cursor: pointer;
 }
 
 /* Sound toggle button */
@@ -110,7 +93,7 @@ h2 {
 
 .profile-links {
   position: absolute;
-  top: 48%; /* adjust mo ito para sa eksaktong pwesto */
+  top: 48%; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -127,12 +110,13 @@ h2 {
 .profile-links img:hover {
   transform: scale(1.2);
 }
+
 .butterfly {
   position: fixed;
   width: 60px;
   height: 60px;
   pointer-events: none;
-  background-image: url('terfly.png'); /* example butterfly image */
+  background-image: url('terfly.png');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
@@ -177,7 +161,7 @@ h2 {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 30ch; } /* adjust sa haba ng text */
+  to { width: 30ch; }
 }
 
 @keyframes blink {
@@ -187,29 +171,30 @@ h2 {
 /* 🔥 Neon border glow animation */
 @keyframes neonGlow {
   0%, 100% {
-    border-color: rgb(216, 216, 216); /* neon pink */
+    border-color: rgb(216, 216, 216);
     box-shadow: 0 0 5px rgb(235, 235, 235),
                 0 0 10px rgb(255, 255, 255),
                 0 0 20px rgb(255, 255, 255),
                 0 0 40px rgb(235, 235, 235);
   }
   50% {
-    border-color: #000000; /* lighter pink */
+    border-color: #000000;
     box-shadow: 0 0 2px #000000,
                 0 0 5px #000000,
                 0 0 10px #000000,
                 0 0 20px #000000;
   }
 }
+
 .center-container {
   position: fixed;
   top: 15%;
   left: 50%;
-  transform: translate(-60%, -50%); /* pang-center lang */
+  transform: translate(-60%, -50%);
 }
 
 .rotating {
-  animation: ikot 5s linear infinite; /* umiikot dito */
+  animation: ikot 5s linear infinite;
 }
 
 .rotating img {
@@ -229,15 +214,15 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
-  backdrop-filter: blur(10px); /* blur sa loob */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   z-index: 99999;
   transition: opacity 0.8s ease;
-  
 }
+
 #enterText {
   font-family: Verdana, cursive;
-  font-size: 2rem;
+  font-size: 32px; /* Fixed px */
   color: #ffffff;
   user-select: none;
   text-align: center;
@@ -255,7 +240,7 @@ h2 {
   overflow: hidden;
   padding: 0;
   border: none;
-  border-radius: 20px; /* pwede mong baguhin shape */
+  border-radius: 20px;
   width: 250px;
   height: 80px;
   cursor: pointer;
@@ -270,7 +255,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* para puno yung loob */
+  object-fit: cover;
   z-index: 0;
 }
 
@@ -282,16 +267,23 @@ h2 {
   font-weight: bold;
   text-shadow: 0 0 5px rgb(202, 202, 202);
 }
+
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+
 .profile-box {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px; /* same as dati */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Ito ang naglalagay sa dulo ang content */
+  width: 400px; 
+  height: 100px;
+  /* ... ibang styles ... */
+  margin: 250px auto; /* Tiyakin na nakasentro pa rin ang box */
 }
+
 
 /* Video na gagawin background */
 .profile-box video {
@@ -303,9 +295,8 @@ h2 {
   object-fit: cover;
   z-index: 0;
   opacity: 0.3;
-  transform: scale(1.8); /* ← permanent zoom */
+  transform: scale(1.8);
 }
-
 
 
 /* Content sa ibabaw ng video */
@@ -314,6 +305,7 @@ h2 {
   position: relative;
   z-index: 1;
 }
+
 .typewriter-box {
   text-align: center;
   font-family: 'Caveat', cursive;
@@ -323,25 +315,32 @@ h2 {
   position: relative;
 }
 
-#username {
-  font-size: 2.0rem;
-  color: rgb(123, 123, 123);
-  margin: 0 0 10px 0;
-  width: 100%;          /* occupy full width ng box */
-  text-align: center;   /* center text */
-  position: relative;   /* fixed sa pwesto */
+typewriter-box {
+ text-align: center;
+ font-family: 'Caveat', cursive;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: relative;
 }
-
+#username {
+ font-size: 2.0rem;
+ color: rgb(123, 123, 123);
+ margin: 0 0 10px 0;
+ width: 100%;/* occupy full width ng box *
+ text-align: center; /* center text */
+position: relative;  /* fixed sa pwesto */
+}
 #quotes {
-  font-size: 1.2rem;
-  color: #959595;
-  margin: 0;
-  border-right: 2px solid rgba(255,255,255,0.75);
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  text-align: center;
+ font-size: 1.2rem;
+ color: #959595;
+ margin: 0;
+ border-right: 2px solid rgba(255,255,255,0.75);
+ white-space: nowrap;
+ overflow: hidden;
+ display: inline-block;
+ text-align: center;
+ min-height: 1.5em; /* reserve height para hindi tataas/bababa si username */
+ max-width: 80vw;  /* para kahit mahaba, limitado lang sa screen */
 
-  min-height: 1.5em;   /* reserve height para hindi tataas/bababa si username */
-  max-width: 80vw;     /* para kahit mahaba, limitado lang sa screen */
 }
