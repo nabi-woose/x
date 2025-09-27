@@ -93,7 +93,7 @@ h2 {
 
 .profile-links {
   position: absolute;
-  top: 48%; 
+  top: 58%; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -368,3 +368,4 @@ position: relative;  /* fixed sa pwesto */
     height: 100vh;
   }
 }
+
